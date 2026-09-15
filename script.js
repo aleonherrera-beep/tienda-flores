@@ -4,7 +4,7 @@
 
 // WhatsApp del emprendimiento: indicativo de país + número, sin +, espacios ni guiones.
 // Ejemplo Colombia: 573001234567
-const WHATSAPP_NUMBER = "573001234567";
+const WHATSAPP_NUMBER = "573008454980";
 
 // Pega aquí la URL de tu Google Apps Script desplegado como "Aplicación web".
 // Ejemplo: https://script.google.com/macros/s/AKfycb.../exec
