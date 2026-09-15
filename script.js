@@ -1,7 +1,7 @@
 // ========= CONFIGURACIÓN =========
 const WHATSAPP_NUMBER = "573042624249";
 // Pega aquí la URL /exec de tu Apps Script (la misma que ya usaste en la página de prueba).
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx1VPjNCBouCqw1XWm731Z46SwG63yBh-cPrqncZOf7ue8pjzt0KT7OpN1_6DTfdZlb/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxp7KoWnr8wBPxv6jYxUr9KZirIeffANQU9IS8de8gRyzSOPWuihm5HDKF_1mRZB7ZW/exec";
 
 const products = [
   // Ramos tradicionales
