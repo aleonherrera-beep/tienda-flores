@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#c88bea" />
+  <meta name="theme-color" content="#9b5ec2" />
   <title>Minibisu Accesorios | Detalles personalizados</title>
   <meta name="description" content="Minibisu Accesorios: ramos, boxes, detalles personalizados, regalos para grados y accesorios hechos con amor en Montería." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,14 +16,16 @@
     <div class="container nav-wrap">
       <a class="brand" href="#inicio" aria-label="Minibisu Accesorios">
         <img src="assets/logo-minibisu.png" alt="Logo Minibisu Accesorios">
-        <span>Minibisu</span>
+        <div class="brand-copy"><strong>Minibisu</strong><small>Detalles & accesorios</small></div>
       </a>
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" aria-label="Navegación principal">
         <a href="#catalogo">Catálogo</a>
         <a href="#como-comprar">Cómo comprar</a>
-        <a href="#nosotros">Nosotros</a>
+        <a href="#nosotros">Sobre Minibisu</a>
       </nav>
-      <button class="cart-btn" id="openCart">Carrito <span id="cartCount">0</span></button>
+      <button class="cart-btn" id="openCart" aria-label="Abrir carrito">
+        <span class="cart-label">Mi pedido</span><span class="cart-count" id="cartCount">0</span>
+      </button>
     </div>
   </header>
 
@@ -31,44 +33,49 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="kicker">Detalles y accesorios personalizados</span>
-          <h1>Convertimos tus momentos especiales en recuerdos inolvidables.</h1>
-          <p>Hola, soy Dana. En Minibisu creamos detalles únicos, llenos de significado y personalizados para celebrar esas fechas que merecen algo especial.</p>
+          <div class="eyebrow-row"><span class="spark">✦</span><span class="kicker">Detalles hechos para recordar</span></div>
+          <h1>Regalos que hablan por ti.</h1>
+          <p class="hero-lead">Hola, soy Dana. En Minibisu convertimos tus ideas en flores, detalles y accesorios personalizados para celebrar a las personas que quieres.</p>
           <div class="hero-actions">
-            <a class="primary-btn" href="#catalogo">Ver catálogo</a>
-            <a class="ghost-btn" href="https://www.instagram.com/minibisu_accesorios/" target="_blank" rel="noopener">@Minibisu_accesorios</a>
+            <a class="primary-btn" href="#catalogo">Explorar catálogo <span>→</span></a>
+            <a class="text-btn" href="https://www.instagram.com/minibisu_accesorios/" target="_blank" rel="noopener">Ver Instagram</a>
           </div>
-          <div class="hero-badges">
-            <span>📍 Montería</span>
-            <span>💜 Hecho a tu gusto</span>
-            <span>💬 Pedido por WhatsApp</span>
+          <div class="hero-meta">
+            <div><strong>Personalizado</strong><span>Colores y detalles a tu gusto</span></div>
+            <div><strong>Montería</strong><span>Entrega coordinada por WhatsApp</span></div>
+            <div><strong>Pedido fácil</strong><span>Agenda en pocos pasos</span></div>
           </div>
         </div>
-        <div class="hero-visual">
-          <div class="logo-card"><img src="assets/logo-minibisu.png" alt="Minibisu Accesorios"></div>
-          <div class="mini-card top">Flores, detalles y accesorios</div>
-          <div class="mini-card bottom">Personaliza colores y dedicatoria</div>
+
+        <div class="hero-gallery" aria-label="Productos destacados Minibisu">
+          <figure class="hero-photo hero-photo-main"><img src="assets/grado-shine.jpg" alt="Ramo personalizado Minibisu"></figure>
+          <figure class="hero-photo hero-photo-top"><img src="assets/chocker-lili.jpg" alt="Accesorio personalizado Minibisu"></figure>
+          <figure class="hero-photo hero-photo-bottom"><img src="assets/box-hotwheels.jpg" alt="Box personalizado Minibisu"></figure>
+          <div class="hero-logo-chip"><img src="assets/logo-minibisu.png" alt=""><span>Hecho con cariño</span></div>
         </div>
       </div>
     </section>
 
     <section class="quick-info" id="como-comprar">
       <div class="container info-grid">
-        <article><span>1</span><div><h3>Elige tu detalle</h3><p>Agrega productos al carrito y personaliza tu pedido.</p></div></article>
-        <article><span>2</span><div><h3>Agenda la entrega</h3><p>Indica fecha, dirección y datos de quien recibe.</p></div></article>
-        <article><span>3</span><div><h3>Confirma el pedido</h3><p>Para confirmar se abona el 50 % y el saldo se paga al recibir.</p></div></article>
+        <article><span class="step-number">01</span><div><h3>Elige</h3><p>Encuentra tu detalle y agrégalo al pedido.</p></div></article>
+        <article><span class="step-number">02</span><div><h3>Personaliza</h3><p>Indica colores, fecha, dirección y dedicatoria.</p></div></article>
+        <article><span class="step-number">03</span><div><h3>Confirma</h3><p>Continúa por WhatsApp y realiza el abono del 50 %.</p></div></article>
       </div>
     </section>
 
     <section class="catalog-section" id="catalogo">
       <div class="container">
         <div class="section-head">
-          <div>
-            <span class="kicker">Catálogo Minibisu</span>
-            <h2>Encuentra el detalle ideal</h2>
-            <p>Los productos personalizados están sujetos a disponibilidad. Algunos requieren varios días de anticipación.</p>
+          <div class="section-copy">
+            <span class="kicker">Catálogo</span>
+            <h2>Un detalle para cada momento</h2>
+            <p>Explora ramos, boxes, regalos para grados y accesorios personalizados. La disponibilidad y el domicilio se confirman al finalizar el pedido.</p>
           </div>
-          <div class="search-box"><input id="searchInput" type="search" placeholder="Buscar producto…" aria-label="Buscar producto"></div>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m2.3-5.2A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z"/></svg>
+            <input id="searchInput" type="search" placeholder="Buscar en Minibisu" aria-label="Buscar producto">
+          </label>
         </div>
 
         <div class="category-tabs" id="categoryTabs"></div>
@@ -77,17 +84,14 @@
       </div>
     </section>
 
-    <section class="about" id="nosotros">
-      <div class="container about-grid">
-        <div class="about-card">
-          <span class="kicker">Hecho con intención</span>
-          <h2>Un detalle puede decir muchísimo.</h2>
-          <p>Minibisu es una tienda virtual en Montería dedicada a crear detalles y accesorios personalizados. Cada pedido se prepara con atención al color, la ocasión y el mensaje que quieres transmitir.</p>
-        </div>
-        <div class="policy-card">
-          <h3>Antes de pedir</h3>
-          <p>Los accesorios personalizados deben agendarse idealmente con al menos 1 día de anticipación. Los productos especiales para grados y algunos detalles temáticos requieren entre 3 y 4 días.</p>
-          <p>El domicilio y la disponibilidad final se confirman por WhatsApp.</p>
+    <section class="brand-story" id="nosotros">
+      <div class="container story-grid">
+        <div class="story-photo"><img src="assets/manilla-jardin.jpg" alt="Accesorio Minibisu"></div>
+        <div class="story-copy">
+          <span class="kicker">Sobre Minibisu</span>
+          <h2>Cada detalle empieza con una intención.</h2>
+          <p>Somos una tienda virtual en Montería dedicada a crear detalles y accesorios personalizados. Nos gusta que cada pedido tenga algo de la persona que lo entrega y algo de quien lo recibe.</p>
+          <div class="story-note"><span>♡</span><p>Los accesorios personalizados se recomiendan con al menos 1 día de anticipación. Los productos para grados y algunos detalles temáticos requieren entre 3 y 4 días.</p></div>
         </div>
       </div>
     </section>
@@ -95,8 +99,15 @@
 
   <footer>
     <div class="container footer-grid">
-      <div class="footer-brand"><img src="assets/logo-minibisu.png" alt=""><div><strong>Minibisu Accesorios</strong><span>Detalles que se quedan en la memoria.</span></div></div>
-      <div><strong>Contacto</strong><a href="https://wa.me/573117546272" target="_blank" rel="noopener">WhatsApp 311 754 6272</a><a href="https://www.instagram.com/minibisu_accesorios/" target="_blank" rel="noopener">@Minibisu_accesorios</a></div>
+      <div class="footer-brand">
+        <img src="assets/logo-minibisu.png" alt="Logo Minibisu">
+        <div><strong>Minibisu Accesorios</strong><span>Detalles que se quedan en la memoria.</span></div>
+      </div>
+      <div class="footer-links">
+        <span>Encuéntranos</span>
+        <a href="https://wa.me/573117546272" target="_blank" rel="noopener">WhatsApp · 311 754 6272</a>
+        <a href="https://www.instagram.com/minibisu_accesorios/" target="_blank" rel="noopener">Instagram · @Minibisu_accesorios</a>
+      </div>
     </div>
   </footer>
 
@@ -104,7 +115,7 @@
 
   <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
     <div class="drawer-head">
-      <div><span class="kicker">Tu pedido</span><h2>Carrito</h2></div>
+      <div><span class="kicker">Minibisu</span><h2>Tu pedido</h2></div>
       <button id="closeCart" class="icon-btn" aria-label="Cerrar">✕</button>
     </div>
     <div class="cart-items" id="cartItems"></div>
@@ -121,7 +132,7 @@
       <label>Colores o personalización<textarea id="customization" rows="2" placeholder="Ej. tonos lilas, rosas rojas, personaje, nombre…"></textarea></label>
       <label>Dedicatoria<textarea id="dedication" rows="3" placeholder="Mensaje para la tarjeta, si aplica"></textarea></label>
       <label>Observaciones<textarea id="observations" rows="2" placeholder="Cualquier indicación adicional"></textarea></label>
-      <button class="whatsapp-btn" id="checkoutBtn">Registrar y continuar por WhatsApp</button>
+      <button class="whatsapp-btn" id="checkoutBtn">Continuar por WhatsApp <span>→</span></button>
       <small>Al continuar, el pedido se registra y se abre WhatsApp para confirmar disponibilidad, domicilio y abono del 50 %.</small>
     </div>
   </aside>
