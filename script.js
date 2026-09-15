@@ -1,5 +1,5 @@
 // ========= CONFIGURACIÓN =========
-const WHATSAPP_NUMBER = "573117546272";
+const WHATSAPP_NUMBER = "573042624249";
 // Pega aquí la URL /exec de tu Apps Script (la misma que ya usaste en la página de prueba).
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx1VPjNCBouCqw1XWm731Z46SwG63yBh-cPrqncZOf7ue8pjzt0KT7OpN1_6DTfdZlb/exec";
 
