@@ -1,130 +1,39 @@
-# Tienda de flores + GitHub Pages + Google Sheets
+# Minibisu Accesorios — tienda final
 
-Versión 2 de la tienda. Es gratuita y funciona con:
+Tienda web estática lista para GitHub Pages.
 
-- **GitHub Pages**: catálogo y carrito.
-- **Google Sheets**: registro central de pedidos.
-- **Google Apps Script**: puente entre la tienda y la hoja.
-- **WhatsApp**: confirmación, domicilio y pago.
+## Incluye
+- Identidad visual basada en los catálogos de Minibisu.
+- WhatsApp configurado: 311 754 6272.
+- Catálogo sin referencias al año 2025.
+- Ramos tradicionales, tulipanes, otros ramos, boxes y anchetas, especial para ellos, grados y accesorios.
+- Fotos reales disponibles en los catálogos.
+- Buscador y filtros por categoría.
+- Carrito y programación de entrega.
+- Reglas de anticipación (accesorios y productos especiales).
+- Registro en Google Sheets + apertura de WhatsApp.
+- Apps Script para la hoja de pedidos y exportación a Excel.
 
-## Flujo
+## PASO IMPORTANTE: conectar Google Sheets
 
-Cliente -> catálogo -> carrito -> completa datos -> pulsa "Enviar pedido por WhatsApp" -> el pedido se registra en Google Sheets -> se abre WhatsApp con el mismo número de pedido.
-
----
-
-## 1. Crear la hoja de pedidos
-
-1. En la cuenta de Google que usará la dueña del emprendimiento, crea una hoja de cálculo nueva.
-2. Ponle un nombre, por ejemplo: **Pedidos Floristería**.
-3. Ve a **Extensiones > Apps Script**.
-4. Borra el código existente de `Code.gs`.
-5. Copia y pega el contenido del archivo `Code.gs` incluido en esta carpeta.
-6. Guarda el proyecto.
-7. En la lista de funciones selecciona `setupSheet` y pulsa **Ejecutar**.
-8. Google pedirá autorización. Concédela.
-9. Vuelve a la hoja. Debe aparecer la pestaña **Pedidos** con sus columnas y listas desplegables.
-
-## 2. Publicar Apps Script como aplicación web
-
-1. Dentro de Apps Script pulsa **Implementar > Nueva implementación**.
-2. Tipo: **Aplicación web**.
-3. Ejecutar como: **Yo**.
-4. Quién tiene acceso: **Cualquier usuario**.
-5. Pulsa **Implementar**.
-6. Copia la URL que termina en `/exec`.
-
-Importante: si después cambias `Code.gs`, debes crear una nueva versión de la implementación o editar la implementación existente para publicar los cambios.
-
-## 3. Conectar la tienda con Google Sheets
-
-Abre `script.js` y cambia:
+1. Usa la misma hoja de Google Sheets que ya probaste o crea una nueva.
+2. En Extensiones > Apps Script, reemplaza el código por `Code.gs` de esta carpeta.
+3. Guarda y ejecuta `setupSheet` una vez.
+4. Implementa como Aplicación web: ejecutar como tú, acceso para cualquiera.
+5. Copia la URL que termina en `/exec`.
+6. Abre `script.js` y reemplaza:
 
 ```js
-const GOOGLE_SCRIPT_URL = "PEGA_AQUI_LA_URL_DE_APPS_SCRIPT";
+const GOOGLE_SCRIPT_URL = "PEGA_AQUI_TU_URL_DE_APPS_SCRIPT";
 ```
 
-por la URL `/exec` del paso anterior.
+por tu URL real.
+7. Guarda y sube a GitHub Pages todos los archivos y la carpeta `assets`.
 
-También cambia el WhatsApp:
+## Actualizar una página ya publicada
 
-```js
-const WHATSAPP_NUMBER = "573001234567";
-```
+Sube/reemplaza `index.html`, `styles.css`, `script.js` y la carpeta `assets`. No es necesario subir `Code.gs` a GitHub.
 
-Ejemplo Colombia: `57` + número celular, sin `+`, espacios ni guiones.
+## Observación
 
-## 4. Publicar la tienda en GitHub Pages
-
-1. Crea un repositorio en GitHub, por ejemplo `tienda-flores`.
-2. Sube:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-3. En el repositorio entra en **Settings > Pages**.
-4. Selecciona **Deploy from a branch**.
-5. Rama: `main`.
-6. Carpeta: `/ (root)`.
-7. Guarda.
-8. GitHub mostrará la URL pública de la tienda.
-
-`Code.gs` NO se sube a GitHub Pages. Ese archivo se pega dentro de Google Apps Script.
-
-## 5. Qué registra cada pedido
-
-La hoja guarda:
-
-- N.º de pedido
-- Fecha y hora del pedido
-- Estado
-- Comprador
-- Teléfono
-- Persona que recibe
-- Productos y cantidades
-- Subtotal de productos
-- Valor del domicilio
-- Total final
-- Método de pago
-- Dirección
-- Fecha de entrega
-- Franja horaria
-- Dedicatoria
-- Observaciones
-
-El estado tiene opciones:
-
-- Pendiente
-- Confirmado
-- Pagado
-- Entregado
-- Cancelado
-
-## 6. Generar un Excel cuando ella quiera
-
-Al abrir la hoja aparecerá el menú:
-
-**🌸 Floristería > Generar Excel de pedidos**
-
-Al seleccionarlo, Apps Script crea automáticamente un archivo `.xlsx` actualizado en Google Drive, por ejemplo:
-
-`Pedidos_Floreria_2026-09-14_2315.xlsx`
-
-La hoja principal sigue intacta y continúa recibiendo pedidos.
-
-También se puede usar el método normal de Google Sheets:
-
-**Archivo > Descargar > Microsoft Excel (.xlsx)**
-
-## 7. Productos y precios
-
-Los productos siguen estando en `script.js`, dentro de:
-
-```js
-const products = [ ... ];
-```
-
-Ahí puedes cambiar nombres, precios, categorías, descripciones e imágenes.
-
-## Nota de seguridad
-
-No guardes datos de tarjetas ni contraseñas en la hoja. Esta versión está pensada para registrar el pedido y continuar el pago por WhatsApp, Nequi, Daviplata, transferencia u otro medio acordado directamente con el negocio.
+El domicilio se confirma por WhatsApp. Los precios de productos con rango (anchetas mediana y grande) muestran el rango del catálogo y el subtotal usa el valor mínimo como referencia; el precio final se confirma por WhatsApp según personalización/presupuesto.

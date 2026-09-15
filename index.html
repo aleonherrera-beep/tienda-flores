@@ -2,159 +2,134 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f8eef2" />
-  <title>Flores & Detalles</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#c88bea" />
+  <title>Minibisu Accesorios | Detalles personalizados</title>
+  <meta name="description" content="Minibisu Accesorios: ramos, boxes, detalles personalizados, regalos para grados y accesorios hechos con amor en Montería." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav container">
-      <a class="brand" href="#inicio">Flores & Detalles</a>
-      <div class="nav-actions">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Minibisu Accesorios">
+        <img src="assets/logo-minibisu.png" alt="Logo Minibisu Accesorios">
+        <span>Minibisu</span>
+      </a>
+      <nav class="desktop-nav">
         <a href="#catalogo">Catálogo</a>
-        <button class="cart-button" id="openCart" aria-label="Abrir carrito">
-          Carrito <span id="cartCount">0</span>
-        </button>
-      </div>
-    </nav>
-
-    <section id="inicio" class="hero-content container">
-      <div>
-        <span class="eyebrow">Detalles que hablan por ti</span>
-        <h1>Flores para convertir un momento en un recuerdo.</h1>
-        <p>Escoge tu arreglo, programa la entrega y envía el pedido directamente por WhatsApp.</p>
-        <a class="primary" href="#catalogo">Ver catálogo</a>
-      </div>
-      <div class="hero-card">
-        <div class="hero-flowers">🌷 🌹 🌻</div>
-        <strong>Pedidos personalizados</strong>
-        <span>Agrega dedicatoria, fecha de entrega y datos de quien recibe.</span>
-      </div>
-    </section>
+        <a href="#como-comprar">Cómo comprar</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+      <button class="cart-btn" id="openCart">Carrito <span id="cartCount">0</span></button>
+    </div>
   </header>
 
   <main>
-    <section id="catalogo" class="section container">
-      <div class="section-title">
-        <div>
-          <span class="eyebrow">Nuestro catálogo</span>
-          <h2>Elige tu detalle</h2>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="kicker">Detalles y accesorios personalizados</span>
+          <h1>Convertimos tus momentos especiales en recuerdos inolvidables.</h1>
+          <p>Hola, soy Dana. En Minibisu creamos detalles únicos, llenos de significado y personalizados para celebrar esas fechas que merecen algo especial.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#catalogo">Ver catálogo</a>
+            <a class="ghost-btn" href="https://www.instagram.com/minibisu_accesorios/" target="_blank" rel="noopener">@Minibisu_accesorios</a>
+          </div>
+          <div class="hero-badges">
+            <span>📍 Montería</span>
+            <span>💜 Hecho a tu gusto</span>
+            <span>💬 Pedido por WhatsApp</span>
+          </div>
         </div>
-        <select id="categoryFilter" aria-label="Filtrar por categoría">
-          <option value="all">Todas</option>
-          <option value="ramos">Ramos</option>
-          <option value="cajas">Cajas</option>
-          <option value="especiales">Especiales</option>
-        </select>
+        <div class="hero-visual">
+          <div class="logo-card"><img src="assets/logo-minibisu.png" alt="Minibisu Accesorios"></div>
+          <div class="mini-card top">Flores, detalles y accesorios</div>
+          <div class="mini-card bottom">Personaliza colores y dedicatoria</div>
+        </div>
       </div>
-
-      <div id="productGrid" class="product-grid"></div>
     </section>
 
-    <section class="section soft">
-      <div class="container benefits">
-        <article>
-          <span>💐</span>
-          <h3>Arreglos especiales</h3>
-          <p>Personaliza colores, flores y dedicatoria.</p>
-        </article>
-        <article>
-          <span>📅</span>
-          <h3>Agenda tu entrega</h3>
-          <p>Indica la fecha en la que deseas recibir el pedido.</p>
-        </article>
-        <article>
-          <span>💬</span>
-          <h3>Confirma por WhatsApp</h3>
-          <p>El pedido llega organizado para continuar el pago.</p>
-        </article>
+    <section class="quick-info" id="como-comprar">
+      <div class="container info-grid">
+        <article><span>1</span><div><h3>Elige tu detalle</h3><p>Agrega productos al carrito y personaliza tu pedido.</p></div></article>
+        <article><span>2</span><div><h3>Agenda la entrega</h3><p>Indica fecha, dirección y datos de quien recibe.</p></div></article>
+        <article><span>3</span><div><h3>Confirma el pedido</h3><p>Para confirmar se abona el 50 % y el saldo se paga al recibir.</p></div></article>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Catálogo Minibisu</span>
+            <h2>Encuentra el detalle ideal</h2>
+            <p>Los productos personalizados están sujetos a disponibilidad. Algunos requieren varios días de anticipación.</p>
+          </div>
+          <div class="search-box"><input id="searchInput" type="search" placeholder="Buscar producto…" aria-label="Buscar producto"></div>
+        </div>
+
+        <div class="category-tabs" id="categoryTabs"></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>No encontramos productos con ese criterio.</div>
+      </div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div class="container about-grid">
+        <div class="about-card">
+          <span class="kicker">Hecho con intención</span>
+          <h2>Un detalle puede decir muchísimo.</h2>
+          <p>Minibisu es una tienda virtual en Montería dedicada a crear detalles y accesorios personalizados. Cada pedido se prepara con atención al color, la ocasión y el mensaje que quieres transmitir.</p>
+        </div>
+        <div class="policy-card">
+          <h3>Antes de pedir</h3>
+          <p>Los accesorios personalizados deben agendarse idealmente con al menos 1 día de anticipación. Los productos especiales para grados y algunos detalles temáticos requieren entre 3 y 4 días.</p>
+          <p>El domicilio y la disponibilidad final se confirman por WhatsApp.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong>Flores & Detalles</strong>
-        <p>Hecho con cariño.</p>
-      </div>
-      <a id="footerWhatsapp" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/logo-minibisu.png" alt=""><div><strong>Minibisu Accesorios</strong><span>Detalles que se quedan en la memoria.</span></div></div>
+      <div><strong>Contacto</strong><a href="https://wa.me/573117546272" target="_blank" rel="noopener">WhatsApp 311 754 6272</a><a href="https://www.instagram.com/minibisu_accesorios/" target="_blank" rel="noopener">@Minibisu_accesorios</a></div>
     </div>
   </footer>
 
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="backdrop" id="backdrop"></div>
 
-  <aside class="drawer" id="cartDrawer" aria-hidden="true">
-    <div class="drawer-header">
-      <div>
-        <span class="eyebrow">Tu pedido</span>
-        <h2>Carrito</h2>
-      </div>
-      <button class="icon-button" id="closeCart" aria-label="Cerrar carrito">✕</button>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div><span class="kicker">Tu pedido</span><h2>Carrito</h2></div>
+      <button id="closeCart" class="icon-btn" aria-label="Cerrar">✕</button>
     </div>
-
-    <div id="cartItems" class="cart-items"></div>
-
+    <div class="cart-items" id="cartItems"></div>
     <div class="checkout">
-      <div class="total-row">
-        <span>Total productos</span>
-        <strong id="cartTotal">$0</strong>
+      <div class="total-row"><span>Subtotal</span><strong id="subtotal">$0</strong></div>
+      <p class="checkout-note">El domicilio y cualquier costo adicional por personalización se confirman por WhatsApp.</p>
+      <div class="form-grid">
+        <label>Tu nombre<input id="buyerName" type="text" placeholder="Nombre de quien compra"></label>
+        <label>Tu celular<input id="buyerPhone" type="tel" placeholder="300 000 0000"></label>
+        <label>Nombre de quien recibe<input id="recipientName" type="text" placeholder="Destinatario"></label>
+        <label>Fecha de entrega<input id="deliveryDate" type="date"></label>
       </div>
-
-      <label>
-        Nombre de quien compra
-        <input id="buyerName" type="text" placeholder="Ej. Andrés" />
-      </label>
-
-      <label>
-        Nombre de quien recibe
-        <input id="recipientName" type="text" placeholder="Ej. Dana" />
-      </label>
-
-      <label>
-        Teléfono de contacto
-        <input id="phone" type="tel" placeholder="Ej. 3001234567" />
-      </label>
-
-      <label>
-        Dirección de entrega
-        <textarea id="address" rows="2" placeholder="Barrio, calle, casa/apto..."></textarea>
-      </label>
-
-      <div class="two-cols">
-        <label>
-          Fecha
-          <input id="deliveryDate" type="date" />
-        </label>
-        <label>
-          Franja horaria
-          <select id="deliveryTime">
-            <option value="Mañana">Mañana</option>
-            <option value="Tarde">Tarde</option>
-            <option value="Noche">Noche</option>
-            <option value="Por confirmar">Por confirmar</option>
-          </select>
-        </label>
-      </div>
-
-      <label>
-        Dedicatoria
-        <textarea id="note" rows="3" placeholder="Escribe aquí el mensaje de la tarjeta..."></textarea>
-      </label>
-
-      <label>
-        Observaciones
-        <textarea id="observations" rows="2" placeholder="Colores, instrucciones especiales, referencia de ubicación..."></textarea>
-      </label>
-
-      <button id="sendWhatsapp" class="whatsapp-button">Enviar pedido por WhatsApp</button>
-      <small>El domicilio y la disponibilidad se confirman por WhatsApp.</small>
+      <label>Dirección de entrega<textarea id="address" rows="2" placeholder="Barrio, dirección y referencia"></textarea></label>
+      <label>Colores o personalización<textarea id="customization" rows="2" placeholder="Ej. tonos lilas, rosas rojas, personaje, nombre…"></textarea></label>
+      <label>Dedicatoria<textarea id="dedication" rows="3" placeholder="Mensaje para la tarjeta, si aplica"></textarea></label>
+      <label>Observaciones<textarea id="observations" rows="2" placeholder="Cualquier indicación adicional"></textarea></label>
+      <button class="whatsapp-btn" id="checkoutBtn">Registrar y continuar por WhatsApp</button>
+      <small>Al continuar, el pedido se registra y se abre WhatsApp para confirmar disponibilidad, domicilio y abono del 50 %.</small>
     </div>
   </aside>
+
+  <dialog id="productDialog" class="product-dialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Cerrar">✕</button>
+    <div id="dialogContent"></div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
